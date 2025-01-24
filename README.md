@@ -14,10 +14,10 @@ Watch the full demonstration in [this video](https://frmlfp7pqh4h.objectstorage.
 
 ### Verify Current Windows Edition
 
-Execute the following command in the command prompt:
+Execute the following command in PowerShell prompt:
 
 ```ruby
-wmic os get Caption, Version, OSArchitecture
+Get-ComputerInfo -Property WindowsProductName
 ```
 
 ### Update Windows Instance
@@ -27,7 +27,7 @@ Apply the latest updates to your Windows instance.
 
 ### Backup
 
-Create a full backup of the boot and attached block volumes.
+Create a [full backup of the boot and attached block volumes.](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/bootvolumebackups.htm)
 
 
 ### Prepare Installation Media
@@ -57,7 +57,7 @@ for example, ***"Windows Server 2022/2025 Standard with Desktop Experience"***
 ### Configuration Retention
 
 Select what to keep. 
-If ***"Keep files, settings and apps"*** option is greyed out, immediately abort the upgrade to prevent data loss.
+If ***"Keep files, settings and apps"*** option is greyed out, ***immediately abort the upgrade to prevent data loss.***
 
 
 ### Monitor Upgrade
@@ -78,16 +78,17 @@ Connect via VNC to the Console connection.
 
 Click ***Install*** to start the upgrade.
 
-
 ### Post-Installation Steps:
 
-when installation has completed, open Command Prompt with Admin Rights and verify the upgraded Windows version using:
+When installation has completed, open a PowerShell Prompt with Admin Rights and verify the upgraded Windows version using:
 
 ```ruby
-wmic os get Caption, Version, OSArchitecture
+Get-ComputerInfo -Property WindowsProductName
 ```
 
 ***Remove the existing product key***
+
+Open a Command prompt with Admin Rights
 
 ```ruby
 slmgr /upk
