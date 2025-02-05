@@ -4,7 +4,17 @@ This README provides a step-by-step guide on performing an in-place migration of
 
 # Overview
 
-This migration guide demonstrates the process of upgrading an existing Windows instance inOCI through in-place migration techniques.The focus is to ensure a smooth transition with minimum downtime and maximal compatibilitywith the new environment.The final step involves reactivating the Windows License Key.**- For BYOL instances:** Simply verify the activation status and if necessary, re-enteryour product key.**- For OCI-Provided license instances:** You must reset the activation and reapply theproduct key using OCI’s KMS. This step is described later in this document.
+This migration guide demonstrates the process of upgrading an existing Windows instance in
+OCI through in-place migration techniques.
+The focus is to ensure a smooth transition with minimum downtime and maximal compatibility
+with the new environment.
+The final step involves reactivating the Windows License Key.
+
+**- For BYOL instances:** Simply verify the activation status and if necessary, re-enter
+your product key.
+
+**- For OCI-Provided license instances:** You must reset the activation and reapply the
+product key using OCI’s KMS. This step is described later in this document.
 
 [Download PDF Guide](./OCI_Windows_In-Place_Migration_Guide.pdf)
 
@@ -33,7 +43,8 @@ Create a full backup of [the boot volume](https://docs.oracle.com/en-us/iaas/Con
 ### PREPARE THE INSTALLATION MEDIA
 
 Download the proper Windows Server ISO locally.
-If you don’t have an [attached block volume](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/creatingavolume.htm) yet, it's advisable to attach one to store the installation media efficiently.
+
+If you don’t have an [attached block volume](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/creatingavolume.htm) yet, it's advisable to attach one to store the installation media efficiently.
 
 
 ### MOUNT INSTALLATION ISO
@@ -49,7 +60,9 @@ If prompted for a product key, enter it.
 
 **Note:** The product key will be removed during KMS activation.
 
-You should be able to use [a Volume Key provided by Microsoft](https://learn.microsoft.com/en-us/windows-server/get-started/kms-client-activationkeys)***A Volume key is a product key that can be used during setup but can't be activated.***
+You should be able to use [a Volume Key provided by Microsoft](https://learn.microsoft.com/en-us/windows-server/get-started/kms-client-activationkeys)
+
+***A Volume key is a product key that can be used during setup but can't be activated without KMS.***
 
 
 ### SELECT WINDOWS EDITION
