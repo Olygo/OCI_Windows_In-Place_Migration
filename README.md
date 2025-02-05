@@ -106,9 +106,15 @@ Connect via VNC to :
 
 ## Post-Installation Steps:
 
-When the installation has completed, 
+When the installation has completed, check the Activation state
 
-open a PowerShell Prompt **with Admin Rights** and verify the upgraded Windows version using:
+```ruby
+slmgr /xpr
+```
+
+If you must reset the Windows Activation for an OCI-Provided License:
+
+Open a PowerShell Prompt **with Admin Rights** and verify the upgraded Windows version using:
 
 ```ruby
 Get-ComputerInfo -Property WindowsProductName
