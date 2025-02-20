@@ -2,6 +2,9 @@
 
 This README provides a step-by-step guide on performing an in-place migration of a Windows instance on Oracle Cloud Infrastructure using an OCI-Included license.
 
+# Youtube video
+[ Windows In-Place Migration on OCI ](https://youtu.be/W6j79zRdcuE?si=0w2vyqjI9M9Bgb63)
+
 # Overview
 
 This migration guide demonstrates the process of upgrading an existing Windows instance in
