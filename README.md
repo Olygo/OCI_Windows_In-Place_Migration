@@ -24,6 +24,9 @@ product key using OCI’s KMS. This step is described later in this document.
 
 # Migration Steps:
 
+### BACKUP YOUR DATA
+
+Create a full backup of [the boot volume](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/bootvolumebackups.htm) and [attached block volumes.](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/blockvolumebackups.htm)
 
 ### VERIFY CURRENT WINDOWS EDITION
 
@@ -37,11 +40,9 @@ Get-ComputerInfo -Property WindowsProductName
 
 Apply the latest updates to your Windows instance.
 
+### INSTALL THE LATEST ORACLE VirtIO DRIVERS
 
-### BACKUP YOUR DATA
-
-Create a full backup of [the boot volume](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/bootvolumebackups.htm) and [attached block volumes.](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/blockvolumebackups.htm)
-
+[Download the Oracle VirtIO Drivers for Microsoft Windows](https://docs.oracle.com/en/operating-systems/oracle-linux/kvm-virtio/kvm-virtio-DownloadingtheOracleVirtIODriversforMicrosoftWindows.html)
 
 ### PREPARE THE INSTALLATION MEDIA
 
